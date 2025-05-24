@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Agendamento Barbearia</title>
+  <link rel="stylesheet" href="agendar.css">
+</head>
+<body>
+       <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="barbearia.html">Início</a></li>
+                <li><a href="abaservico.html">Serviços</a></li>
+                <li><a href="agendamento.html">Agendar</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+  <h1>Agende já seu horário</h1>
+
+  <form id="formAgendamento">
+    <label for="nome">Nome completo:</label><br>
+    <input type="text" id="nome" name="nome" required><br><br>
+
+    <label for="telefone">Telefone:</label><br>
+    <input type="tel" id="telefone" name="telefone" required><br><br>
+
+    <label for="servico">Serviço:</label><br>
+    <select id="servico" name="servico" required>
+      <option value="corte">Corte de cabelo</option>
+      <option value="barba">Barba</option>
+      <option value="corte_barba">Corte + Barba</option>
+      <option value="sobrancelha">Sobrancelha</option>
+    </select><br><br>
+
+    <label for="data">Data:</label><br>
+    <input type="date" id="data" name="data" required><br><br>
+
+    <label for="hora">Hora:</label><br>
+    <input type="time" id="hora" name="hora" required><br><br>
+
+    <input type="submit" value="Agendar">
+  </form>
+
+  <script>
+    document.getElementById("formAgendamento").addEventListener("submit", function(event) {
+      event.preventDefault(); 
+      window.location.href = "confirmacao.html"; // Redireciona para a página de confirmação
+    });
+  </script>
+</body>
+</html>
